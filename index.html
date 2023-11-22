@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=5">
+    <title>君临专业而不失优雅</title>
+    <meta name="description" content="人生就像一杯茶,不会苦一辈子,但总会苦一阵子">
+    <meta name="keywords" content="Java,Spring,个人博客，微信小程序，博客">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="static/css/ins.css">
+   <link rel="stylesheet" href="../static/layui/css/layui.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jquery.fancybox@2.1.5/source/jquery.fancybox.css">
+    
+    
+    <script type="text/javascript">
+        if (!!window.ActiveXObject || "ActiveXObject" in window) { //is IE?
+            alert('朋友，上古浏览器不支持呢~');
+        }
+    </script>
+</head>
+
+<body>
+    <div id="body-wrap">
+        <nav class="not_index_bg" id="nav" style="background-image:url(https://api.ixiaowai.cn/gqapi/gqapi.php)">
+            <div id="page_site-info">
+                <div id="site-title">
+                    <span class="blogtitle"></span>
+                    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+                    <script>
+                        var typed = new Typed(".blogtitle", {
+                            strings: ['人生就像一杯茶,不会苦一辈子,但总会苦一阵子！', '认清自己往往比轻视别人更重要！'],
+                            startDelay: 300,
+                            typeSpeed: 100,
+                            loop: true,
+                            backSpeed: 50,
+                            showCursor: true
+                        });
+                    </script>
+                </div>
+            </div>
+        </nav>
+        <main id="content-outer">
+            <div class="layout_page" id="content-inner">
+                <div class="aside_content" id="aside_content">
+                    <div class="card-widget card-info">
+                        <div class="card-content">
+                            <div class="card-info-avatar is-center">
+                                <img class="avatar-img"
+                                    src="https://q1.qlogo.cn/g?b=qq&nk=1825703954&s=100"
+                                    alt="avatar">
+                                <div class="author-info__name">君临</div>
+                                <div class="author-info__description">愿历此坎坷，山河可无恙，人间皆可安</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card-widget card-announcement">
+                        <div class="card-content">
+                            <div class="item-headline">
+                                <i class="fa fa-bullhorn" aria-hidden="true"></i>
+                                <span>一言</span>
+                            </div>
+                            <div id="hitokoto">正在读取接口....</div>
+                        </div>
+                    </div>
+                    <div class="card-widget card-announcement">
+                        <div class="card-content">
+                            <div class="item-headline">
+                                <i class="fa fa-calendar" aria-hidden="true"></i>
+                                <span>今日诗词</span>
+                            </div>
+                            <div id="jinrishici-sentence">正在读取接口....</div>
+                        </div>
+                    </div>
+                    
+                    <!--div class="card-widget card-announcement">
+                        <div class="card-content">
+                            <div class="item-headline">
+                                <i class="fa fa-commenting-o" aria-hidden="true"></i>
+                                <span>诗词接口</span>
+                            </div>
+                            <span class="jinrishici-sentence">正在读取接口....</span>
+                        </div>
+                    </div>-->
+                    <div class="card-widget card-announcement">
+                        <div class="card-content">
+                            <div class="item-headline">
+                                <i class="fa fa-cubes" aria-hidden="true"></i>
+                                <span>舔狗日记</span>
+                            </div>
+                            <script type="text/javascript" src="https://api.tsuixin.com/api/tiangou?format=js&charset=utf-8"></script>
+                            <div id="tiangou"><script>hitokoto()</script></div>
+                        </div>
+                    </div>
+                    <div class="card-widget card-announcement">
+                        <div class="card-content">
+                            <div class="item-headline">
+                                <i class="fa fa-cube" aria-hidden="true"></i>
+                                <span>今日毒鸡汤</span>
+                            </div>
+                            <script type="text/javascript" src="https://www.iowen.cn/jitang//api/?format=js&charset=utf-8"></script>
+                            <div id="hitokoto"><script>hitokoto()</script></div>
+                        </div>
+                    </div>
+                    
+                    <div class="card-widget card-announcement">
+                        <div class="card-content">
+                            <div class="item-headline">
+                                <img src="https://api.szfx.top/info-card/?word=欢迎访问本站!"/>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    
+                    <div class="card-widget card-webinfo">
+                        <div class="card-content">
+                            <div class="item-headline">
+                                <i class="fa fa-line-chart" aria-hidden="true"></i>
+                                <span>站点信息</span>
+                            </div>
+                            <div class="webinfo">
+                                <div class="webinfo-item">
+                                <div class="webinfo-site-uv-name">本站访客数 :</div>
+                                <div class="webinfo-site-uv-count" id="busuanzi_value_site_uv"></div>
+                                </div>
+                                <div class="webinfo-item">
+                                <div class="webinfo-site-name">本站总访问 :</div>
+                                <div class="webinfo-site-pv-count" id="busuanzi_value_site_pv"></div>
+                                </div>
+                                <div class="webinfo-item">
+                                <div class="webinfo-site-uv-name">文章阅读数 :</div>
+                                <div class="webinfo-site-uv-count" id="busuanzi_value_page_pv"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="card-widget card-announcement">
+                        <div class="card-content">
+                            <div class="item-headline">
+                                <div class="layui-carousel" id="lunbo">
+                      <div carousel-item>
+                    <div><img src="http://www.dmoe.cc/random.php"></div>
+                      <div><img src="https://cdn.seovx.com/?mom=302"></div>
+                            <div><img src="https://api.btstu.cn/sjbz/api.php"></div>
+                             <div><img src="https://www.dmoe.cc/random.php"></div>
+                             <div><img src="https://cdn.seovx.com/d/?mom=302"></div>
+                                </div>
+                                   </div>
+                              <script src="/static/layui/layui.js"></script>
+                       <script>
+                           layui.use('carousel', function(){
+                        var carousel = layui.carousel;
+                           //建造实例
+                          carousel.render({
+                              elem: '#lunbo'
+                              ,width: '100%' //设置容器宽度
+                              ,arrow: 'always' //始终显示箭头
+                              ,height: '200px' //高度
+                              ,autoplay: 'true' //切换动画方式
+                              ,indicator: 'inside' //切换动画方式
+                                });
+                              });
+                          </script>
+                        </div>
+                      </div>
+                    </div>  
+                    
+                    
+                        <div class="card-widget card-announcement" style="text-align:center;color:red;">
+                        <div class="card-content">
+                            <div class="item-headline">
+                                <div class="layui-card">
+                               <div class="layui-card-header"><h3>人生格言</h3></div>
+                                 <div class="layui-card-body">
+                                     一份耕耘,一份收获。
+                             </div>
+                            </div>
+                            <div class="layui-card">
+                               <div class="layui-card-header"><h3>人生格言</h3></div>
+                                 <div class="layui-card-body">
+                                     暂时的是现实,永生的是理想
+                             </div>
+                            </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!--结束-->
+                </div>
+               
+                <article id="page">
+                    <div class="article-container">
+                        <h2>音乐</h2><br>
+                        <meting-js auto="https://y.qq.com/n/yqq/playlist/7713574197.html">
+                        </meting-js>
+                        <hr>
+
+                        <h2>技能</h2><br>
+                        <div class="skillbox">
+                            <div class="skillbar">
+                                <div class="skillbar-title"
+                                    style="background: linear-gradient(to right, #FF0066 0%, #FF00CC 100%); width: 82%">
+                                    <span>Java</span>
+                                </div>
+                                <div class="skill-bar-percent">82%</div>
+                            </div>
+                            <div class="skillbar">
+                                <div class="skillbar-title"
+                                    style="background: linear-gradient(to right, #9900FF 0%, #CC66FF 100%); width: 94%">
+                                    <span>前端</span>
+                                </div>
+                                <div class="skill-bar-percent">94%</div>
+                            </div>
+                            <div class="skillbar">
+                                <div class="skillbar-title"
+                                    style="background: linear-gradient(to right, #2196F3 0%, #42A5F5 100%); width: 64%">
+                                    <span>Spring</span>
+                                </div>
+                                <div class="skill-bar-percent">64%</div>
+                            </div>
+                            <div class="skillbar">
+                                <div class="skillbar-title"
+                                    style="background: linear-gradient(to right, #00BCD4 0%, #80DEEA 100%); width: 92%">
+                                    <span>SpringMVC</span>
+                                </div>
+                                <div class="skill-bar-percent">92%</div>
+                            </div>
+                            <div class="skillbar">
+                                <div class="skillbar-title"
+                                    style="background: linear-gradient(to right, #00BCD4 0%, #f54009 100%); width: 86%">
+                                    <span>SpringBoot</span>
+                                </div>
+                                <div class="skill-bar-percent">86%</div>
+                            </div>
+                            <div class="skillbar">
+                                <div class="skillbar-title"
+                                    style="background: linear-gradient(to right, #4CAF50 0%, #81C784 100%); width: 67%">
+                                    <span>Mybatis</span>
+                                </div>
+                                <div class="skill-bar-percent">67%</div>
+                            </div>
+                            <div class="skillbar">
+                                <div class="skillbar-title"
+                                    style="background: linear-gradient(to right, #FFEB3B 0%, #FFF176 100%); width: 84%">
+                                    <span>数据结构与算法</span>
+                                </div>
+                                <div class="skill-bar-percent">84%</div>
+                            </div>
+                        </div>
+
+                             <hr>
+                        <h2>项目入口</h2><br>
+                        <div class="button-xmrk">
+                 <center>
+                 <a href="#" class="layui-btn layui-btn-primary layui-border-green"><i class="layui-icon layui-icon-rate"></i>项目地址</a>
+                 <a href="#" class="layui-btn layui-btn-primary layui-border-green"><i class="layui-icon layui-icon-rate"></i>项目地址</a><br><br>
+                 <a href="#" class="layui-btn layui-btn-primary layui-border-green"><i class="layui-icon layui-icon-rate"></i>项目地址</a>
+                 <a href="#" class="layui-btn layui-btn-primary layui-border-green"><i class="layui-icon layui-icon-rate"></i>项目地址</a><br><br>
+                 <a href="#" class="layui-btn layui-btn-primary layui-border-green"><i class="layui-icon layui-icon-rate"></i>项目地址</a>
+                 <a href="#" class="layui-btn layui-btn-primary layui-border-green"><i class="layui-icon layui-icon-rate"></i>项目地址</a>
+                 
+                 </center>
+                        </div>
+                        <hr>
+                        <h2>待添加</h2>
+                        <!--div class="tool">
+                            <img alt="今日诗词" src="https://v2.jinrishici.com/one.svg" style="max-width:100%; display: block; margin: 0 auto;">
+                            
+                        </div>-->
+                        <div class="layui-tab layui-tab-card">
+                <ul class="layui-tab-title">
+                  <li class="layui-this">随机诗词</li>
+                   <li>宝塔面板</li>
+                    <li>待添加</li>
+                    <li>待添加</li>
+                    <li>待添加</li>
+                       </ul>
+                    <div class="layui-tab-content" style="height: 60px; text-align:center;">
+                      <div class="layui-tab-item layui-show">
+                      
+                      <img alt="今日诗词" src="https://v2.jinrishici.com/one.svg" style="max-width:65%; display: block; margin: 0 auto;">
+                      
+                      </div>
+                      <div class="layui-tab-item"><a href="https://www.bt.cn/new/download.html" class="layui-btn layui-btn-primary layui-border-blue"><i class="layui-icon layui-icon-rate"></i>Linux面板</a><a href="https://download.bt.cn/win/panel/BtSoft.zip" class="layui-btn layui-btn-primary layui-border-orange"><i class="layui-icon layui-icon-rate"></i>Windows面板</a></div>
+                 <div class="layui-tab-item"><a href="#" class="layui-btn layui-btn-primary layui-border-red"><i class="layui-icon layui-icon-rate"></i>待添加</a></div>
+                    <div class="layui-tab-item"><a href="#" class="layui-btn layui-btn-primary layui-border-green"><i class="layui-icon layui-icon-rate"></i>待添加</a></div>
+                     <div class="layui-tab-item"><a href="#" class="layui-btn layui-btn-primary layui-border-green"><i class="layui-icon layui-icon-rate"></i>待添加</a></div>
+                 <div class="layui-tab-item"><a href="#" class="layui-btn layui-btn-primary layui-border-black"><i class="layui-icon layui-icon-rate"></i>待添加</a></div>
+             </div>
+               </div>
+
+                        <div class="layui-tab layui-tab-card">
+                <ul class="layui-tab-title">
+                  <li class="layui-this">待添加</li>
+                   <li>待添加</li>
+                    <li>待添加</li>
+                    <li>待添加</li>
+                    <li>待添加</li>
+                       </ul>
+                    <div class="layui-tab-content" style="height: 60px; text-align:center;">
+                      <div class="layui-tab-item layui-show">
+                      
+                      <a href="#" class="layui-btn layui-btn-primary layui-border-green"><i class="layui-icon layui-icon-rate"></i>项目地址</a>
+                      <a href="#" class="layui-btn layui-btn-primary layui-border-green"><i class="layui-icon layui-icon-rate"></i>项目地址</a><br>
+                      
+                      </div>
+                      <div class="layui-tab-item"><a href="#" class="layui-btn layui-btn-primary layui-border-blue"><i class="layui-icon layui-icon-rate"></i>待添加</a><a href="#" class="layui-btn layui-btn-primary layui-border-orange"><i class="layui-icon layui-icon-rate"></i>待添加</a></div>
+                 <div class="layui-tab-item"><a href="#" class="layui-btn layui-btn-primary layui-border-red"><i class="layui-icon layui-icon-rate"></i>待添加</a></div>
+                    <div class="layui-tab-item"><a href="#" class="layui-btn layui-btn-primary layui-border-green"><i class="layui-icon layui-icon-rate"></i>待添加</a></div>
+                     <div class="layui-tab-item"><a href="#" class="layui-btn layui-btn-primary layui-border-green"><i class="layui-icon layui-icon-rate"></i>待添加</a></div>
+                 <div class="layui-tab-item"><a href="#" class="layui-btn layui-btn-primary layui-border-black"><i class="layui-icon layui-icon-rate"></i>待添加</a></div>
+             </div>
+               </div>
+
+
+
+
+
+
+
+                        <!--结束-->
+                    </div>
+                    
+                </article>
+            </div>
+            
+        </main>
+        
+        <footer id="footer">
+            <div id="footer-wrap">
+                <h5 style="text-align: center">
+                    <div class="row">
+                        <div class="col col-xs-12">
+                            <p class="copyright">© 2020-2024 君临个人主页. All rights reserved</p><br>
+                            <p><a href="https://beian.miit.gov.cn" target="_blank"
+                            >滇ICP备2022008253号</a>
+                </p>
+                        </div>
+                    </div>
+        </h5>
+            </div>
+        </footer>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery.fancybox@2.1.5/source/jquery.fancybox.js"></script>
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/instant.page@3.0.0/instantpage.js" type="module"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lazysizes@5.2.0/lazysizes.min.js" async></script>
+    <!-- aplayer、meting -->
+    <!-- require APlayer -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
+    <!-- require MetingJS -->
+    <script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+
+    <!-- nplayer -->
+    <script src="https://unpkg.com/nplayer@latest/dist/index.min.js"></script>
+
+    <!--   一言、今日诗词   -->
+    <script src="https://v1.hitokoto.cn/?encode=js&select=%23hitokoto" defer></script>
+    <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
+
+    
+    <!--鼠标点击效果-->
+    <script src="https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.0.8/js/maodian.js"></script>
+
+    <script type="text/javascript">
+        console.clear();
+        console.log("%c 有朋自远方来, 不亦说乎.", "background:#24272A; color:#ffffff", "");
+        console.log("%c Github %c", "background:#24272A; color:#ffffff", "", "https://github.com/laoxuai");
+        console.log("%c 版本号: %c", "background:#24272A; color:#ffffff", "", "1.0.0");
+
+
+      /*  (function ($) {
+            $.fn.snow = function (options) {
+                var $flake = $('<div id="snowbox" />').css({ 'position': 'absolute', 'z-index': '9999', 'top': '-50px' }).html('&#10052;'),
+                    documentHeight = $(document).height(),
+                    documentWidth = $(document).width(),
+                    defaults = {
+                        minSize: 10,
+                        maxSize: 20,
+                        newOn: 1000,
+                        flakeColor: "#AFDAEF" /* 此处可以定义雪花颜色，若要白色可以改为#FFFFFF */
+                   /* },
+                    options = $.extend({}, defaults, options);
+                var interval = setInterval(function () {
+                    var startPositionLeft = Math.random() * documentWidth - 100,
+                        startOpacity = 0.5 + Math.random(),
+                        sizeFlake = options.minSize + Math.random() * options.maxSize,
+                        endPositionTop = documentHeight - 200,
+                        endPositionLeft = startPositionLeft - 500 + Math.random() * 500,
+                        durationFall = documentHeight * 10 + Math.random() * 5000;
+                    $flake.clone().appendTo('body').css({
+                        left: startPositionLeft,
+                        opacity: startOpacity,
+                        'font-size': sizeFlake,
+                        color: options.flakeColor
+                    }).animate({
+                        top: endPositionTop,
+                        left: endPositionLeft,
+                        opacity: 0.2
+                    }, durationFall, 'linear', function () {
+                        $(this).remove()
+                    });
+                }, options.newOn);
+            };
+        })(jQuery);
+        $(function () {
+            $.fn.snow({
+                minSize: 5, /* 定义雪花最小尺寸 */
+                maxSize: 50,/* 定义雪花最大尺寸 */
+                newOn: 800  /* 定义密集程度，数字越小越密集 */
+            });
+        });*/
+
+        // 浏览器搞笑标题
+        var OriginTitle = document.title;
+        var titleTime;
+        document.addEventListener('visibilitychange', function () {
+            if (document.hidden) {
+                // $('[rel="icon"]').attr('href', "/funny.ico");
+                document.title = '╭(°A°`)╮ 页面崩溃啦 ~';
+                clearTimeout(titleTime);
+            }
+            else {
+                $('[rel="icon"]').attr('href', "/favicon.ico");
+                document.title = '(ฅ>ω<*ฅ) 噫又好啦 ~' + OriginTitle;
+                titleTime = setTimeout(function () {
+                    document.title = OriginTitle;
+                }, 2000);
+            }
+        });
+    </script>
+    <script src="static/layui/layui.js"></script>
+    <script src="static/js/jquery.yh.js"></script>
+</body>
+
+</html>
